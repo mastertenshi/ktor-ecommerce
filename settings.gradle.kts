@@ -1,0 +1,1 @@
+rootProject.name = "mk.mastertenshi.ktor-ecommerce"
