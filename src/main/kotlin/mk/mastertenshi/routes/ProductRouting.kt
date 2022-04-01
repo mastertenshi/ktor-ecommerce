@@ -52,7 +52,8 @@ fun Application.productRouting() {
                     mapOf(
                         "sizes" to listOf("S", "M", "L"),
                         "colors" to listOf("red", "blue", "white")
-                    )
+                    ),
+                    mapOf("S" to 100, "M" to 110, "L" to 120)
                 )
                 val productJson = Json.encodeToString(product)
                 productCollection.insertOne(Document.parse(productJson))
