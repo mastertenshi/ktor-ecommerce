@@ -6,17 +6,20 @@ import io.ktor.server.http.content.*
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.request.*
+import mk.mastertenshi.routes.productRouting
 
 fun Application.configureRouting() {
-    
 
-//    routing {
-//        get("/") {
-//            call.respondText("Hello, friend")
-//        }
-//        // Static plugin. Try to access `/static/index.html`
-//        static("/static") {
-//            resources("static")
-//        }
-//    }
+    routing {
+        productRouting()
+
+        get("/") {
+            call.respondText("Hello, friend")
+        }
+
+        // Static plugin. Try to access `/static/index.html`
+        static("/static") {
+            resources("static")
+        }
+    }
 }
