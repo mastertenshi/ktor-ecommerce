@@ -28,6 +28,8 @@ data class Product(
     private fun initStock() {
         if (type.isNotEmpty()) {
             crawl()
+        } else {
+            stock[""] = 0
         }
     }
 
