@@ -9,6 +9,7 @@ data class Product(
     val description: String,
     val imgUrls: List<String>,
     val type: Map<String, List<String>>,
+    val price: Map<String, Int>,
     val stock: MutableMap<String, Int> = mutableMapOf(),
     val clicks: Int = 0
 ) {
